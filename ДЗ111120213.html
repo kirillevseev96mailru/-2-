@@ -1,0 +1,63 @@
+#1
+
+translate = {'one': 'один', 'two': 'два', 'three': 'три', 'four': 'четыре', 'five': 'пять', 'six': 'шесть', 'seven': 'семь', 'eight': 'восемь', 'nine': 'девять', 'ten': 'десять'}
+def trans(slovo):
+    return translate[slovo]
+slovo = input()
+slovo = trans(slovo)
+print(slovo)
+
+#2
+
+translate = {'one': 'один', 'two': 'два', 'three': 'три', 'four': 'четыре', 'five': 'пять', 'six': 'шесть', 'seven': 'семь', 'eight': 'восемь', 'nine': 'девять', 'ten': 'десять'}
+def trans(slovo):
+    a = slovo[0]
+    if a.isupper():
+        low = slovo.lower()
+        slovo123 = translate[low]
+        return slovo123.capitalize()
+    else:
+        return translate[slovo]
+slovo = input()
+slovo = trans(slovo)
+print(slovo)
+	
+#3
+
+Umena = {'И': ["Иван", "Илья"], 'М': ["Мария"], 'П': ["Петр"]}
+def buk(Bukva):
+    return Umena[Bukva]
+Bukva = input()
+spisok = buk(Bukva)
+print(spisok)
+
+#4
+
+Umena = {'С': {'И': 'Иван Сергеев, Инна Серова', 'А': 'Анна Савельева'}, "А": {"П": "Петр Алексеев"}}
+def buk(Bukva3,Bukva2):
+    return Umena[Bukva3][Bukva2]
+Bukva3 = input(str())
+Bukva2 = input(str())
+spisok = buk(Bukva3, Bukva2)
+print(spisok)
+
+№5
+
+import random
+nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
+adverbs = ["сегодня", "вчера", "завтра", "позавчера", "ночью"]
+adjectives = ["веселый", "яркий", "зеленый", "утопичный", "мягкий"]
+new_jokes = []
+for i in range(1, 6, 1):
+    number1 = random.randint(0, len(nouns)-1)
+    new_jokes.append(nouns[number1])
+    del nouns[number1]
+    number2 = random.randint(0, len(adverbs)-1)
+    new_jokes.append(adverbs[number2])
+    del adverbs[number2]
+    number3 = random.randint(0, len(adjectives)-1)
+    new_jokes.append(adjectives[number3])
+    del adjectives[number3]
+    print(str(new_jokes))
+    new_jokes = []
+
