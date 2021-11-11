@@ -43,21 +43,27 @@ print(spisok)
 
 №5
 
+
 import random
+def randomik(n1):
+    new_jokes = []
+    for i in range(1, n1, 1):
+        number1 = random.randint(0, len(nouns)-1)
+        new_jokes.append(nouns[number1])
+        del nouns[number1]
+        number2 = random.randint(0, len(adverbs)-1)
+        new_jokes.append(adverbs[number2])
+        del adverbs[number2]
+        number3 = random.randint(0, len(adjectives)-1)
+        new_jokes.append(adjectives[number3])
+        del adjectives[number3]
+        print(str(new_jokes))
+        new_jokes = []
 nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
 adverbs = ["сегодня", "вчера", "завтра", "позавчера", "ночью"]
 adjectives = ["веселый", "яркий", "зеленый", "утопичный", "мягкий"]
-new_jokes = []
-for i in range(1, 6, 1):
-    number1 = random.randint(0, len(nouns)-1)
-    new_jokes.append(nouns[number1])
-    del nouns[number1]
-    number2 = random.randint(0, len(adverbs)-1)
-    new_jokes.append(adverbs[number2])
-    del adverbs[number2]
-    number3 = random.randint(0, len(adjectives)-1)
-    new_jokes.append(adjectives[number3])
-    del adjectives[number3]
-    print(str(new_jokes))
-    new_jokes = []
+n = input('Введите: кол-во шутко и прибавьте к нему 1: ')
+n = int(n)
+s = randomik(n)
+
 
