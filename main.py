@@ -4,6 +4,8 @@ print(type(15 / 3))
 print(type(15 // 3))
 print(type(15 ** 3))
 
+
+
 №2
 spisok = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 spisok1 = []
@@ -13,14 +15,14 @@ for element in spisok:
     elif (element.startswith('+') or element.startswith('-')) and element[1:].isdigit():
         spisok1.extend(['"', F'{element[0]}{int(element[1:]):02}', '"'])
     else:
-        spisok1.append(element)
-Info=' '.join(spisok1)
+    spisok1.append(element)
+Info = ' '.join(spisok1)
 
 symbol_idxs = []
 for idx, letter in enumerate(Info):
     if letter == '"':
         symbol_idxs.append(idx)
-        print(symbol_idxs)
+    print(symbol_idxs)
 
 for idx in range(len(symbol_idxs)):
     if idx % 2 == 0:
@@ -33,11 +35,11 @@ for idx in range(len(symbol_idxs)):
 for del_idx in reversed(symbol_idxs):
     Info = Info[:del_idx] + Info[del_idx + 1:]
     print(Info)
-#Хоть я и использовал ваше решение, но зато добился кристального понимая в этой задаче
+# Хоть я и использовал ваше решение, но зато добился кристального понимая в этой задаче
 
 №3
 spisok = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха',
-           'была', '+5', 'градусов']
+          'была', '+5', 'градусов']
 
 idx = 0
 while idx < len(spisok):
@@ -63,9 +65,9 @@ print(info)
 spisok = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
 for pos in spisok:
     print('Привет', pos.split()[-1].title())
-	
-	
-	
+
+
+
 №5
 goods = [57.8, 46.51, 97, 10.55, 20.14, 907.22, 48.35, 1000.98, 90.77, 100.9]
 for good in goods:
